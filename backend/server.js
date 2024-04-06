@@ -12,5 +12,5 @@ app.listen(PORT,()=>{
 });
 app.get('/',(req,res)=>{
     res.send("Hello server");
-})
+});
 app.use('/api/users',userRouter);

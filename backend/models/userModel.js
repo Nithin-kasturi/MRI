@@ -4,11 +4,19 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true,
     },
-    tumorType:{
+    age:{
+        type:String,
+        required:true,
+    },
+    gender:{
         type:String,
         required:true,
     },
     image:{
+        type:String,
+        required:true,
+    },
+    predictedClass:{
         type:String,
         required:true,
     }

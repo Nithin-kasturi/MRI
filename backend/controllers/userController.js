@@ -2,15 +2,14 @@ import User from "../models/userModel.js";
 
 export const insertRecord=async(req,res)=>{
     try {
-        const {name,tumorType,image}=req.body;
-        console.log(tumorType)
-        if(!name || !tumorType || !image){
-            res.status(500).json({error:"All fielda are required"});
-        }
+        console.log(req.body);
+        const {name,age,gender,showImage,predictedClass}=req.body;
         const newUser=await new User({
             name,
-            tumorType,
-            image,
+            age,
+            gender,
+            image:showImage,
+            predictedClass,
         });
         if(newUser){
             await newUser.save();
